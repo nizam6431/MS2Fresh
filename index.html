@@ -91,28 +91,34 @@
         </form>
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
-          <li><a ui-sref="fish"><i class="fa fa-circle-o text-red"></i> <span>Fish</span></a></li>
-          <li><a ui-sref="freshWaterFish"><i class="fa fa-circle-o text-yellow"></i> <span>Fresh Water Fish</span></a>
-          </li>
-          <li><a ui-sref="prawns"><i class="fa fa-circle-o text-aqua"></i> <span>Prawns</span></a></li>
-          <li><a ui-sref="crabLobster"><i class="fa fa-circle-o text-aqua"></i> <span>Crab & Lobster</span></a></li>
+          <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>Fresh Sea Food</span>
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                  <li><a ui-sref="fish"><i class="fa fa-circle-o text-red"></i> <span>Fish</span></a></li>
+                  <li><a ui-sref="freshWaterFish"><i class="fa fa-circle-o text-yellow"></i> <span>Fresh Water Fish</span></a>
+                  </li>
+                  <li><a ui-sref="prawns"><i class="fa fa-circle-o text-aqua"></i> <span>Prawns</span></a></li>
+                  <li><a ui-sref="crabLobster"><i class="fa fa-circle-o text-aqua"></i> <span>Crab & Lobster</span></a></li>
+              </ul>
+            </li>
+            <li><a><i class="fa fa-circle-o"></i> <span>Checken</span></a></li>
+            <li><a><i class="fa fa-circle-o"></i> <span>Mutotn</span></a></li>
         </ul>
       </section>
     </aside>
     <div class="content-wrapper">
-      <section class="content-header">
-        <h1>
-          Blank page
-          <small>it all starts here</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Examples</a></li>
-          <li class="active">Blank page</li>
-        </ol>
-      </section>
       <section class="content">
-        <div ui-view></div>
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div ui-view></div>
+              </div>
+          </div>
       </section>
     </div>
     <footer class="main-footer">

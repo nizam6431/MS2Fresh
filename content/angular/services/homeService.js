@@ -11,14 +11,12 @@
     }
 
     function NSHelper() {
-        this.Get = function(name){
-            localStorage.setItem();
-        }
-        this.Set = function(){}
-        this.Remove = function(){}
+        this.Get = function(name, data){ return JSON.parse(localStorage.setItem(name)); }
+        this.Set = function(name, data){ localStorage.setItem(name, JSON.stringify(data)) }
+        this.Update = function(name, data) { localStorage.removeItem(name);localStorage.setItem(name, data); }
+        this.Remove = function(name) { localStorage.removeItem(name); }
     }
 
     ng.service('homeServices', HomeServices);
-
     ng.$inject = ['$http'];
 })(app);
