@@ -53,83 +53,14 @@
             display: block;
         }
     }
+    
 </style>
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <div class="panel">
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                        <div class="thumbnail">
-                            <a href="javascript:void(0)">
-                                <img src="{{hCtrl.sliderImageList[0].ImgUrl}}" ng-click="hCtrl.GetDetails(sil)"
-                                    style="width:100%">
-                                <div class="caption">
-                                    <p>{{sil.Name}}</p>
-                                    <p>{{sil.Description}}</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                        <h3>{{hCtrl.sliderImageList[0].Name}}</h3>
-                        <hr />
-                        <h3>From : &#8377; {{hCtrl.sliderImageList[0].Amount}}</h3>
-                        <hr />
-                        <b>Quick Overview</b>
-                        <p>
-                            {{hCtrl.sliderImageList[0].Description}}
-                        </p>
-                        <hr />
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-4" for="size">Size :</label>
-                                    <div class="col-sm-8">
-                                        <select class="form-control">
-                                            <option selected="selected" value="">--Select--</option>
-                                            <option>abc</option>
-                                            <option>xyz</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-4" for="quantity">Quantity :</label>
-                                    <div class="col-sm-8">
-                                        <select class="form-control">
-                                            <option selected="selected" value="">--Select--</option>
-                                            <option>abc</option>
-                                            <option>xyz</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                <a href="javascript:void(0)">Clear</a>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                <input type="number" class="form-control" />
-                            </div>
-                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                <button class="btn btn-danger btn-block">ADD TO CART</button>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="panel">
     <div class="panel-body">
-        <table id="cart" class="table table-hover table-condensed">
+        <table id="cart" class="table table-bordered table-hover table-condensed">
             <thead>
-                <tr>
+                <tr class="bg-primary">
                     <th style="width:50%">Product</th>
                     <th style="width:10%">Price</th>
                     <th style="width:8%">Quantity</th>
@@ -138,23 +69,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr ng-repeat="atc in addToCartList">
                     <td data-th="Product">
                         <div class="row">
-                            <div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..."
+                            <div class="col-sm-2 hidden-xs"><img src="{{atc.ImgUrl}}" alt="..."
                                     class="img-responsive" /></div>
                             <div class="col-sm-10">
-                                <h4 class="nomargin">Product 1</h4>
-                                <p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Lorem ipsum dolor sit amet.</p>
+                                <h4 class="nomargin">{{atc.Name}}</h4>
+                                <p>{{atc.Description}}</p>
                             </div>
                         </div>
                     </td>
-                    <td data-th="Price">$1.99</td>
+                    <td data-th="Price">{{atc.Amount}}</td>
                     <td data-th="Quantity">
                         <input type="number" class="form-control text-center" value="1">
                     </td>
-                    <td data-th="Subtotal" class="text-center">1.99</td>
+                    <td data-th="Subtotal" class="text-center">{{atc.Amount}}</td>
                     <td class="actions" data-th="">
                         <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
                         <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
@@ -184,6 +114,7 @@
                 <div class="caption">
                     <p>{{sil.Name}}</p>
                     <p>{{sil.Description}}</p>
+                    <p class="text-right"><button class="btn btn-sm btn-success" ng-click="hCtrl.addToCart(sil)">Add To Cart</button></p>
                 </div>
             </a>
         </div>

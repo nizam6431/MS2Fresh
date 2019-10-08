@@ -51,6 +51,18 @@ var config = (function (ng) {
                         });
                     }]
                 }
+            }).state('details', {
+                url: '/details',
+                templateUrl: '../../pages/details/details.html',
+                controller: 'detailCtrl',
+                controllerAs: 'dCtrl',
+                resolve: {
+                    deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                        return $ocLazyLoad.load({
+                            files: ['../../pages/details/details.js']
+                        });
+                    }]
+                }
             }).state('freshWaterFish', {
                 url: '/freshWaterFish',
                 templateUrl: '../pages/freshWaterFish/freshWaterFish.html',

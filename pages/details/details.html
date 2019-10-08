@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="panel">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                        <div class="thumbnail">
+                            <a href="javascript:void(0)">
+                                <img src="{{selectedFishItem.ImgUrl}}" ng-click="hCtrl.GetDetails(sil)"
+                                    style="width:100%">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <h3>Name : {{selectedFishItem.Name}}</h3>
+                        <hr />
+                        <h3>From : &#8377; {{selectedFishItem.Amount}}</h3>
+                        <hr />
+                        <b>Quick Overview</b>
+                        <p>
+                            {{selectedFishItem.Description}}
+                        </p>
+                        <hr />
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label" for="size">Size :</label>
+                                    <select class="form-control">
+                                        <option selected="selected" value="">--Select--</option>
+                                        <option>abc</option>
+                                        <option>xyz</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="form-group">
+                                    <label class="control-label" for="quantity">Quantity :</label>
+                                    <select class="form-control">
+                                        <option selected="selected" value="">--Select--</option>
+                                        <option>abc</option>
+                                        <option>xyz</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <input type="number" class="form-control" />
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <button class="btn btn-success btn-block">ADD TO CART</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-right">
+                                <a href="javascript:void(0)" class="btn btn-danger">Clear</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

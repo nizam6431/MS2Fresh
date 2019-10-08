@@ -1,19 +1,19 @@
 [{
     "Id": 1,
-    "Name": "THREE",
+    "Name": "One",
     "ImgUrl": "../../content/images/one.jpg",
     "Amount": 200,
     "Description": "my name is shahid chutiya"
 },
 {
-    "Id": 1,
+    "Id": 2,
     "Name": "TWO",
     "ImgUrl": "../../content/images/two.jpg",
     "Amount": 250,
     "Description": "name : Shahid, status: randwa"
 },
 {
-    "Id": 1,
+    "Id": 3,
     "Name": "FOUR",
     "ImgUrl": "../../content/images/three.jpg",
     "Amount": 750,
